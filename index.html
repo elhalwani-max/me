@@ -37,7 +37,7 @@ h1{margin:8px 0 0;padding-bottom:10px;font-size:35px;line-height:1.35;font-weigh
 .num{font-size:22px;font-weight:500;direction:ltr;letter-spacing:.05em;margin:2px 0 4px}.num.sm{font-size:16px;margin:14px 0 0;color:var(--g1)}
 .cta{display:block;margin:30px auto 44px;width:calc(100% - 36px);height:54px;border:2px solid var(--g1);border-radius:27px;background:linear-gradient(180deg,rgba(240,219,168,.34),rgba(240,219,168,.2));color:#fff3cf;font-family:inherit;font-weight:700;font-size:16px;box-shadow:0 10px 26px rgba(184,145,74,.25)}
 </style>
-</head><body><div id="app"></div>
+</head><body><div id="app"></div><script>(function(){if(!/Android/i.test(navigator.userAgent))return;function fix(){document.querySelectorAll('a.btn[href*="ipn.eg/"]').forEach(function(a){if(a.dataset.ipn)return;var h=a.getAttribute('href'),m=h.match(/^https?:\/\/ipn\.eg(\/.*)$/);if(!m)return;a.dataset.ipn=1;a.setAttribute('href','intent://ipn.eg'+m[1]+'#Intent;scheme=https;package=com.egyptianbanks.instapay;S.browser_fallback_url='+encodeURIComponent(h)+';end')})}new MutationObserver(fix).observe(document.documentElement,{childList:true,subtree:true});fix()})()</script>
 <script>
 const SV={
 phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>',
