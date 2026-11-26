@@ -1,0 +1,30 @@
+media:
+  input: .
+  output: /
+content:
+  - name: card
+    label: كارتي الشخصي
+    type: file
+    path: data.json
+    format: json
+    fields:
+      - {name: name, label: الاسم, type: string}
+      - {name: job, label: الوظيفة, type: string}
+      - {name: company, label: الشركة, type: string}
+      - {name: photo, label: الصورة الشخصية, type: image}
+      - {name: logo, label: اللوجو, type: image}
+      - {name: phone, label: الموبايل الأول (اتصال وواتساب), type: string}
+      - {name: phone2, label: الموبايل الثاني (اتصال فقط), type: string}
+      - {name: facebook, label: رابط فيسبوك, type: string}
+      - {name: facebookLabel, label: النص الظاهر لفيسبوك, type: string}
+      - {name: instagram, label: رابط إنستجرام, type: string}
+      - {name: instagramLabel, label: النص الظاهر لإنستجرام, type: string}
+      - {name: telegram, label: رابط تيليجرام, type: string}
+      - {name: telegramLabel, label: النص الظاهر لتيليجرام, type: string}
+      - {name: vodafoneNumber, label: رقم فودافون كاش, type: string}
+      - {name: vodafoneLink, label: رابط فودافون كاش, type: string}
+      - {name: vodafoneQr, label: كود QR فودافون كاش, type: image}
+      - {name: instapayLink, label: رابط إنستاباي, type: string}
+      - {name: instapayIpa, label: عنوان إنستاباي, type: string}
+      - {name: instapayQr, label: كود QR إنستاباي, type: image}
+      - {name: etisalatNumber, label: رقم اتصالات كاش, type: string}
