@@ -31,7 +31,7 @@ h1{margin:8px 0 0;padding-bottom:10px;font-size:35px;line-height:1.35;font-weigh
 .pay{margin:14px 18px 0;padding:18px 16px;border-radius:20px;border:1px solid var(--ln);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));text-align:center}
 .ph{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--g1);font-size:16px;margin-bottom:14px}
 .btn{display:flex;align-items:center;justify-content:center;height:48px;border-radius:24px;background:linear-gradient(135deg,var(--g1),var(--g2));color:#16120a;font-weight:700;font-size:15px;text-decoration:none}
-.copy{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:44px;margin-top:10px;border-radius:22px;border:1.3px solid var(--g2);background:transparent;color:var(--g1);font-family:inherit;font-weight:500;font-size:13px}
+.copy{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:48px;margin-top:12px;border-radius:24px;border:2px solid var(--g1);background:rgba(240,219,168,.16);color:#fff3cf;font-family:inherit;font-weight:700;font-size:14px;box-shadow:0 0 0 1px rgba(0,0,0,.4),0 4px 14px rgba(184,145,74,.18)}.copy:active{background:rgba(240,219,168,.32)}
 .copy svg{width:16px;height:16px}
 .qr{margin-top:14px}.qr img{width:100%;max-width:230px;display:block;margin:0 auto;border-radius:12px;background:#fff;padding:6px}
 .num{font-size:22px;font-weight:500;direction:ltr;letter-spacing:.05em;margin:2px 0 4px}.num.sm{font-size:16px;margin:14px 0 0;color:var(--g1)}
@@ -64,7 +64,7 @@ if(c.facebook)social.push(row(SV.facebook,'فيسبوك',c.facebookLabel||c.face
 if(c.instagram)social.push(row(SV.instagram,'إنستجرام',c.instagramLabel||c.instagram,c.instagram));
 if(c.telegram)social.push(row(SV.telegram,'تيليجرام',c.telegramLabel||c.telegram,c.telegram));
 const pay=[];
-if(c.vodafoneNumber||c.vodafoneLink)pay.push(ph('فودافون كاش',(c.vodafoneLink?`<a class="btn" href="${e(c.vodafoneLink)}">حوّل فلوس عبر فودافون كاش</a>`:'')+(c.vodafoneNumber?`<div class="num ${c.vodafoneLink?'sm':''}">${e(fmt(c.vodafoneNumber))}</div>`+(c.vodafoneLink?'':cp('نسخ الرقم',c.vodafoneNumber)):'')+(c.vodafoneQr?`<div class="qr"><img src="${e(c.vodafoneQr)}" alt=""></div>`:'')));
+if(c.vodafoneNumber||c.vodafoneLink)pay.push(ph('فودافون كاش',(c.vodafoneLink?`<a class="btn" href="${e(c.vodafoneLink)}">حوّل فلوس عبر فودافون كاش</a>`:'')+(c.vodafoneNumber?`<div class="num ${c.vodafoneLink?'sm':''}">${e(fmt(c.vodafoneNumber))}</div>`+cp('نسخ رقم فودافون كاش',c.vodafoneNumber):'')+(c.vodafoneQr?`<div class="qr"><img src="${e(c.vodafoneQr)}" alt=""></div>`:'')));
 if(c.instapayLink||c.instapayIpa)pay.push(ph('إنستاباي',(c.instapayLink?`<a class="btn" href="${e(c.instapayLink)}">ادفع عبر إنستاباي</a>`:'')+(c.instapayIpa?cp('نسخ العنوان '+c.instapayIpa,c.instapayIpa):'')+(c.instapayQr?`<div class="qr"><img src="${e(c.instapayQr)}" alt=""></div>`:'')));
 if(c.etisalatNumber)pay.push(ph('اتصالات كاش',`<div class="num">${e(fmt(c.etisalatNumber))}</div>`+cp('نسخ الرقم',c.etisalatNumber)));
 document.getElementById('app').innerHTML=`<div class="hero"><img src="${e(c.photo)}" alt="${e(c.name)}"><i class="tl"></i><i class="tr"></i></div>
